@@ -1,0 +1,7 @@
+---
+- name: startup play
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: continous ping task
+      shell: ping localhost
