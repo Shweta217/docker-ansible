@@ -1,0 +1,14 @@
+version: '3'
+services:
+  jenkins:
+    image: 'jenkins/jenkins'
+    ports:
+      - "9090:8080"
+    volumes:
+      - app-volume1:/usr/local/bin
+  ansible:
+    image: 'ansible'
+    volumes:
+      - app-volume1:/usr/local/bin
+volumes:
+     app-volume1:
